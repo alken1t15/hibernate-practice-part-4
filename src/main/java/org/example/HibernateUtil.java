@@ -13,11 +13,15 @@ public class HibernateUtil {
         try {
             return new Configuration().configure(new File("src\\main\\resources\\hibernate.cfg.xml")).buildSessionFactory();
         }catch (Throwable ex){
-            throw new RuntimeException();
+            System.err.println("Initial SessionFactory creation failed. " + ex);
+            throw new ExceptionInInitializerError();
         }
     }
 
     public static SessionFactory getSessionFactory(){
+        if (sessionFactory == null){
+            buildSessionFactory();
+        }
         return sessionFactory;
     }
     public static void shutdown(){
