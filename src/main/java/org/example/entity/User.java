@@ -24,4 +24,9 @@ public class User {
 
     private String username;
 
+
+    public User(Long id, String email) {
+        this.id = id;
+        this.email = email;
+    }
 }
