@@ -10,6 +10,11 @@
       <property name="connection.password">root</property>
     <property name="hibernate.show_sql">true</property>
     <mapping class="org.example.entity.User"/>
+    <mapping class="org.example.entity.Category"/>
+    <mapping class="org.example.entity.Priority"/>
+    <mapping class="org.example.entity.Activity"/>
+    <mapping class="org.example.entity.Stat"/>
+    <mapping class="org.example.entity.Role"/>
     <!--    <property name="hibernate.dialect">org.hibernate.dialect.Postgres</property>-->
 
     <!-- DB schema will be updated if needed -->
